@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<component name="org.nuxeo.theme.nuxeo.splitpane">
+
+  <require>org.nuxeo.theme.nuxeo.default</require>
+  <require>org.nuxeo.opensocial.dashboard.themeContrib</require>
+  <!--  themes -->
+  <extension target="org.nuxeo.theme.services.ThemeService"
+    point="themes">
+    <theme>
+      <src>themes/split-theme-galaxy.xml</src>
+    </theme>
+  </extension>
+
+  <extension target="org.nuxeo.theme.services.ThemeService"
+    point="applications">
+
+
+    <application root="/nuxeo" template-engine="jsf-facelets">
+
+      <negotiation>
+        <strategy>nuxeo5</strategy>
+        <default-engine>default</default-engine>
+        <default-theme>split_pane_galaxy/default</default-theme>
+        <default-perspective>default</default-perspective>
+      </negotiation>
+
+      <!-- Cache control for theme resources (/nxthemes-lib/) -->
+      <resource-caching>
+        <lifetime>36000</lifetime>
+      </resource-caching>
+
+      <!-- Cache control for theme styles (/nxthemes-css/) -->
+      <style-caching>
+        <lifetime>900</lifetime>
+      </style-caching>
+      
+    </application>
+  </extension>
+</component>

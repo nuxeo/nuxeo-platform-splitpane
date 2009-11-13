@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<fragment>
+
+  <extension target="application#MODULE">
+
+    <module>
+      <java>${bundle.fileName}</java>
+    </module>
+
+  </extension>
+
+  <install>
+    <unzip from="${bundle.fileName}" to="/">
+      <include>nuxeo.war/**</include>
+    </unzip>
+
+    <delete path="nxthemes-html.tmp" />
+    <mkdir path="nxthemes-html.tmp" />
+
+    <unzip from="${bundle.fileName}" to="nxthemes-html.tmp">
+      <include>META-INF/**</include>
+    </unzip>
+
+    <delete path="nxthemes-html.tmp" />
+  </install>
+
+
+</fragment>
