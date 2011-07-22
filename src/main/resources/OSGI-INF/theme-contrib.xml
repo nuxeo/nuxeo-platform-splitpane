@@ -3,7 +3,6 @@
 <component name="org.nuxeo.theme.nuxeo.splitpane">
 
   <require>org.nuxeo.theme.nuxeo.default</require>
-  <require>org.nuxeo.opensocial.dashboard.themeContrib</require>
   <!--  themes -->
   <extension target="org.nuxeo.theme.services.ThemeService"
     point="themes">
