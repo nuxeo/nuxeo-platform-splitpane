@@ -1,3 +1,5 @@
+<div id="splitter_bar" class="splitter_bar">[nxthemes markup]</div>
+
 <style type="text/css" media="all" xmlns:fn="http://java.sun.com/jsp/jstl/functions"
                                     xmlns:c="http://java.sun.com/jstl/core">
                                     
@@ -31,7 +33,7 @@
 
   .vsplitbar {
   width: 5px;
-  background: #50A6C2 url(/nuxeo/img/vgrabber.gif) no-repeat center;
+  background: #50A6C2 url(#{contextPath}/img/vgrabber.gif) no-repeat center;
   }  
 </style>
 
@@ -55,4 +57,3 @@
   
   });
 </script>
-<div id="splitter_bar" class="splitter_bar">[nxthemes markup]</div>

@@ -15,7 +15,7 @@
     point="applications">
 
 
-    <application root="/nuxeo" template-engine="jsf-facelets">
+    <application root="${org.nuxeo.ecm.contextPath}" template-engine="jsf-facelets">
 
       <negotiation>
         <strategy>nuxeo5</strategy>
@@ -36,4 +36,34 @@
       
     </application>
   </extension>
+  
+    <!-- Register mapping between theme pages and resources -->
+  <extension target="org.nuxeo.theme.styling.service" point="pages">
+    <themePage name="split_pane_galaxy/default">
+      <defaultFlavor>default</defaultFlavor>
+      <flavors>
+        <flavor>default</flavor>
+        <flavor>rainbow</flavor>
+      </flavors>
+      <styles>
+        <style>basics</style>
+        <style>buttons_and_actions</style>
+        <style>header</style>
+        <style>body</style>
+        <style>footer</style>
+        <style>navigation</style>
+        <style>tables</style>
+        <style>forms</style>
+        <style>popups</style>
+        <style>breadcrumb</style>
+        <style>messages_and_tooltips</style>
+        <style>foldable_boxes</style>
+        <style>drag_and_drop</style>
+        <style>richfaces_components</style>
+        <style>tabs_content</style>
+        <style>nuxeo_dm_specific</style>
+      </styles>
+    </themePage>
+  </extension>
+  
 </component>

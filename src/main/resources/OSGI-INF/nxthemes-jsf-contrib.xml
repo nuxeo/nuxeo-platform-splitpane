@@ -10,11 +10,8 @@
 
   <require>org.nuxeo.theme.jsf</require>
 
- 
-
   <extension target="org.nuxeo.theme.services.ThemeService" point="views">  
 
-    <!-- Split pane stuff -->
     <view name="split section frame" template-engine="jsf-facelets">
       <element-type>section</element-type>
       <format-type>widget</format-type>
@@ -33,6 +30,17 @@
       </template>
     </view>
 
+    <!-- Split pane stuff -->
+
+    <view name="split section frame" template-engine="jsf-facelets">
+      <engine>page-editor</engine>
+      <element-type>section</element-type>
+      <format-type>widget</format-type>
+      <template>
+        nxthemes/editor/widgets/jsf/section-frame.xml
+      </template>
+    </view>
+
     <!-- fix for the theme editor -->
     <view name="split section frame" template-engine="freemarker">
       <engine>page-editor</engine>
@@ -41,14 +49,6 @@
       <template>
         nxthemes/editor/widgets/fm/section-frame.xml
       </template>
-    </view>
-
-    <view name="split section frame" template-engine="freemarker,jsf-facelets">
-      <engine>page-editor</engine>
-      <mode>area-styles-section</mode>
-      <element-type>section</element-type>
-      <format-type>widget</format-type>
-      <class>org.nuxeo.theme.editor.views.SectionFrameAreaStyle</class>
     </view>
 
     <view name="split section frame" template-engine="freemarker">
@@ -61,16 +61,23 @@
       </template>
     </view>
 
-    <view name="split section frame" template-engine="jsf-facelets">
+    <view name="split section frame" template-engine="freemarker">
       <engine>page-editor</engine>
+      <mode>area-styles-section</mode>
       <element-type>section</element-type>
       <format-type>widget</format-type>
-      <template>
-        nxthemes/editor/widgets/jsf/section-frame.xml
-      </template>
+      <class>org.nuxeo.theme.editor.views.SectionFrameAreaStyle</class>
     </view>
 
-    <view name="split cell frame" template-engine="freemarker,jsf-facelets">
+    <view name="split section frame" template-engine="jsf-facelets">
+      <engine>page-editor</engine>
+      <mode>area-styles-section</mode>
+      <element-type>section</element-type>
+      <format-type>widget</format-type>
+      <class>org.nuxeo.theme.editor.views.SectionFrameAreaStyle</class>
+    </view>
+
+    <view name="split cell frame" template-engine="freemarker">
       <engine>page-editor</engine>
       <element-type>cell</element-type>
       <format-type>widget</format-type>
@@ -79,7 +86,24 @@
       </class>
     </view>
 
-    <view name="split cell frame" template-engine="freemarker,jsf-facelets">
+    <view name="split cell frame" template-engine="jsf-facelets">
+      <engine>page-editor</engine>
+      <element-type>cell</element-type>
+      <format-type>widget</format-type>
+      <class>
+        org.nuxeo.theme.editor.views.CellFrameWidget
+      </class>
+    </view>
+
+    <view name="split cell frame" template-engine="freemarker">
+      <engine>page-editor</engine>
+      <mode>area-styles-cell</mode>
+      <element-type>cell</element-type>
+      <format-type>widget</format-type>
+      <class>org.nuxeo.theme.editor.views.CellFrameAreaStyle</class>
+    </view>
+
+    <view name="split cell frame" template-engine="jsf-facelets">
       <engine>page-editor</engine>
       <mode>area-styles-cell</mode>
       <element-type>cell</element-type>
