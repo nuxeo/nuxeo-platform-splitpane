@@ -1,0 +1,2 @@
+DEPRECATED: see https://jira.nuxeo.com/browse/NXP-16416 
+
